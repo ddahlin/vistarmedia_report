@@ -13,8 +13,9 @@
 					"script": {
 						"id": "3588b91d-e172-4a27-a265-e5b25b823a91",
 						"exec": [
-							"////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+							"///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
 							"/////////////////////////CHECK STATUS",
+							"",
 							"pm.test(\"Status code is 200\", function() {",
 							"    pm.response.to.have.status(200);",
 							"});",
@@ -24,7 +25,7 @@
 							"",
 							"});",
 							"",
-							"////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+							"///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
 							"",
 							"var jsonData = pm.response.json();",
 							"",
@@ -240,7 +241,7 @@
 							"});",
 							"",
 							"pm.test(\"partner_profit\", function () {",
-							"pm.expect(jsonData.rows.partner_profit).to.eql([3267.55601506]);",
+							"pm.expect(jsonData.rows.partner_profit).to.eql([3265.55601506]);",
 							"});",
 							""
 						],
@@ -273,8 +274,9 @@
 					},
 					{
 						"key": "Cookie",
-						"value": "ga=GA1.2.773777264.1578100332; hubspotutk=2168773f6b28d3d68195f6de0669a185; __hssrc=1; __hs_opt_out=no; _gid=GA1.2.2044077022.1578941439; __zlcmid=wEippNvL1w8l0t; __hstc=153503399.2168773f6b28d3d68195f6de0669a185.1578100333024.1578941439075.1579210859938.4; tr-development=eyJfcGVybWFuZW50Ijp0cnVlLCJ1c2VyLmlkIjoiLVlENkFMc2RUOWFQQmN3Vnh5OW1KUSIsInVzZXIuaXNfYWRtaW4iOmZhbHNlfQ.EQNuMg.dAgDjP7c3YFeR35kLt1LtFBAgDA",
-						"type": "text"
+						"value": "tr-development=eyJfcGVybWFuZW50Ijp0cnVlLCJ1c2VyLmlkIjoiLVlENkFMc2RUOWFQQmN3Vnh5OW1KUSIsInVzZXIuaXNfYWRtaW4iOmZhbHNlfQ.EQzsWg.vkToDWT3FoiQtA0xmUU6iqhMaLQ; Domain=.vistarmedia.com; Expires=Sat, 25-Jan-2020 05:00:10 GMT; Secure; HttpOnly; Path=/",
+						"type": "text",
+						"disabled": true
 					}
 				],
 				"body": {
