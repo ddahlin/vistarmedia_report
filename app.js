@@ -78,7 +78,7 @@ class TestRunContext {
             "response_type": "in_channel",
             "attachments": [
                 {
-                    "fallback": "Newman Run Summary",
+                    "fallback": "VistarMedia Report Run Summary",
                     "color": `${this.colour}`,
                     "title": "Summary Test Result",
                     "title_link": "https://vistarmedia-report.herokuapp.com/htmlResults.html",
@@ -214,7 +214,7 @@ app.post("/newmanRun", (req, res) => {
             "attachments": [
                 {
                     "color": "good",
-                    "title": "Newman Test Run Started",
+                    "title": "VistarMedia Report Test Run Started",
                     "mrkdwn": true,
                     "fields": [
                         {
