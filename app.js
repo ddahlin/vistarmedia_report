@@ -81,7 +81,7 @@ class TestRunContext {
                     "fallback": "Newman Run Summary",
                     "color": `${this.colour}`,
                     "title": "Summary Test Result",
-                    "title_link": "https://adserver-demo.herokuapp.com/htmlResults.html",
+                    "title_link": "https://vistarmedia-report.herokuapp.com/htmlResults.html",
                     "text": `Environment File: *${this.envFileName}*\nTotal Run Duration: *${this.runDuration}*`,
                     "mrkdwn": true,
                     "fields": [
