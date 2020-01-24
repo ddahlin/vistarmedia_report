@@ -1,0 +1,6 @@
+{
+    "name": "basic-newman-slack-bot",
+    "description": "A basic express app that allows you to run Postman collections with the Newman Runner",
+    "repository": "hhttps://github.com/ddahlin/postman_test",
+    "keywords": ["slack", "postman", "newman"]
+}
