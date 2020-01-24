@@ -1,0 +1,90 @@
+{
+	"id": "d2a3b518-86ca-493c-9603-203769b87bb9",
+	"name": "PROD",
+	"values": [
+		{
+			"key": "SERVER_NAME",
+			"value": "https://adserver.iad1.videohub.tv",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "S3QA",
+			"value": "https:\\/\\/s.tremorvideodsp.com\\/q\\/",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "USYNC",
+			"value": "https:\\/\\/dt-secure.videohub.tv\\/v1\\/usync\\/",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "L0_PIXEL",
+			"value": "https:\\/\\/l0-secure.videohub.tv\\/ssframework\\/log\\/log.png\\?",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "SYNC_DV",
+			"value": "https:\\/\\/sync.doubleverify.com\\/query.gif\\?",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "TPS30_DV",
+			"value": "https:\\/\\/tps30.doubleverify.com\\/visit.jpg\\?",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "OBJECT_NET",
+			"value": "https:\\/\\/objects-secure.videohub.tv\\/",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "USYNC2",
+			"value": "http:\\/\\/dt.videohub.tv\\/v1\\/usync\\/",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "L0_PIXEL2",
+			"value": "http:\\/\\/l0.videohub.tv\\/ssframework\\/log\\/log.png\\?",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "SYNC_DV2",
+			"value": "http:\\/\\/sync.doubleverify.com\\/query.gif\\?",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "TPS30_DV2",
+			"value": "http:\\/\\/tps30.doubleverify.com\\/visit.jpg\\?",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "failed",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "passed",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "testResultCounter",
+			"value": "",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2019-03-14T14:56:11.910Z",
+	"_postman_exported_using": "Postman/7.0.4"
+}
