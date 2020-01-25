@@ -185,7 +185,7 @@ app.post("/newmanRun", (req, res) => {
     const enteredEnv     = (channelText).split(" ")[0]
     const iterationCount = parseInt((channelText).split(" ")[1])
     
-    const filename = `./environments/${enteredEnv}_vistarmedia.postman_collection.json`
+    const filename = `./environments/${enteredEnv}_vistarmedia.postman_Environment.json`
     
     const fileNameCheck = fs.existsSync(filename)
 
