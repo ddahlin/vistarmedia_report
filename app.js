@@ -134,7 +134,7 @@ class TestRunContext {
 let executeNewman = (environmentFile, iterationCount) => {
     return new Promise((resolve, reject) => {
         newman.run({
-            collection: './collections/Restful_Booker_Collection.json',
+            collection: './collections/vistarmedia.postman_collection.json',
             environment: environmentFile,
             iterationCount: iterationCount,
             reporters: ['htmlextra'],
@@ -185,7 +185,7 @@ app.post("/newmanRun", (req, res) => {
     const enteredEnv     = (channelText).split(" ")[0]
     const iterationCount = parseInt((channelText).split(" ")[1])
     
-    const filename = `./environments/${enteredEnv}_Restful_Booker_Environment.json`
+    const filename = `./environments/${enteredEnv}_vistarmedia.postman_collection.json`
     
     const fileNameCheck = fs.existsSync(filename)
 
