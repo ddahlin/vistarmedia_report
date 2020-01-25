@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "87e8a900-a087-40f7-870f-4ce11883b219",
+		"name": "vistarmedia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LAST_YEAR_REPORT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3588b91d-e172-4a27-a265-e5b25b823a91",
+						"exec": [
+							"///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+							"/////////////////////////CHECK STATUS",
+							"",
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"/////////////////////////RESPONSE TIME",
+							"pm.test(\"Response time is less than 200ms\", function() {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"",
+							"});",
+							"",
+							"///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+							"",
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"range_type\", function () {",
+							"pm.expect(jsonData.range_type).to.eql(\"last_year\");",
+							"});",
+							"",
+							"pm.test(\"local_end\", function () {",
+							"pm.expect(jsonData.local_end).to.eql(\"2019-12-31T23:59:59\");",
+							"});",
+							"",
+							"pm.test(\"year\", function () {",
+							"pm.expect(jsonData.rows.year).to.eql([",
+							"             \"2019-01-01 00:00:00\",",
+							"            \"2019-01-01 00:00:00\",",
+							"            \"2019-01-01 00:00:00\",",
+							"            \"2019-01-01 00:00:00\",",
+							"            \"2019-01-01 00:00:00\"]);",
+							"});",
+							"",
+							"pm.test(\"month\", function () {",
+							"pm.expect(jsonData.rows.month).to.eql([",
+							"            \"2019-10-01 00:00:00\",",
+							"            \"2019-11-01 00:00:00\",",
+							"            \"2019-11-01 00:00:00\",",
+							"            \"2019-12-01 00:00:00\",",
+							"            \"2019-12-01 00:00:00\"]);",
+							"});",
+							"",
+							"pm.test(\"network_name\", function () {",
+							"pm.expect(jsonData.rows.network_name).to.eql([",
+							"            \"QA Assessment Network\",",
+							"            \"QA Assessment Network\",",
+							"            \"QA Assessment Network\",",
+							"            \"QA Assessment Network\",",
+							"            \"QA Assessment Network\"]);",
+							"});",
+							"",
+							"pm.test(\"advertiser_name\", function () {",
+							"pm.expect(jsonData.rows.advertiser_name).to.eql([",
+							"            \"Budweiser\",",
+							"            \"Coca-Cola\",",
+							"            \"Budweiser\",",
+							"            \"Budweiser\",",
+							"            \"Coca-Cola\"]);",
+							"});",
+							"",
+							"pm.test(\"insertion_order\", function () {",
+							"pm.expect(jsonData.rows.insertion_order).to.eql([",
+							"            \"NAGLUZYnQd60B6C8JQSKVQ\",",
+							"            \"djY4HajtQ0CD09KvJZ87Bg\",",
+							"            \"NAGLUZYnQd60B6C8JQSKVQ\",",
+							"            \"NAGLUZYnQd60B6C8JQSKVQ\",",
+							"            \"djY4HajtQ0CD09KvJZ87Bg\"]);",
+							"});",
+							"",
+							"pm.test(\"Check impressions\", function () {",
+							"pm.expect(jsonData.rows.impressions).to.eql([",
+							"            117.203052422,",
+							"            55570.5,",
+							"            55228.5,",
+							"            61228.5,",
+							"            61327.5]);",
+							"});",
+							"pm.test(\"Check spots\", function () {",
+							"pm.expect(jsonData.rows.spots).to.eql([",
+							"            3140,",
+							"            37047,",
+							"            36819,",
+							"            40819,",
+							"            40885]);",
+							"});",
+							"pm.test(\"Check partner_revenue\", function () {",
+							"pm.expect(jsonData.rows.partner_revenue).to.eql([",
+							"            0.58601506,",
+							"            777.987,",
+							"            773.199,",
+							"            857.199,",
+							"            858.585]);",
+							"});",
+							"pm.test(\"partner_eCPM\", function () {",
+							"pm.expect(jsonData.rows.partner_eCPM).to.eql([",
+							"            4.99999827555556,",
+							"            14.0,",
+							"            14.0,",
+							"            14.0,",
+							"            14.0]);",
+							"});",
+							"",
+							"pm.test(\"partner_data_provider_revenue_eCPM\", function () {",
+							"pm.expect(jsonData.rows.partner_data_provider_revenue_eCPM).to.eql([",
+							"            0.0,",
+							"            0.0,",
+							"            0.0,",
+							"            0.0,",
+							"            0.0]);",
+							"});",
+							"",
+							"pm.test(\"partner_data_provider_revenue\", function () {",
+							"pm.expect(jsonData.rows.partner_data_provider_revenue).to.eql([",
+							"            0.0,",
+							"            0.0,",
+							"            0.0,",
+							"            0.0,",
+							"            0.0]);",
+							"});",
+							"",
+							"pm.test(\"partner_profit\", function () {",
+							"pm.expect(jsonData.rows.partner_profit).to.eql([",
+							"            0.58601506,",
+							"            777.987,",
+							"            773.199,",
+							"            857.199,",
+							"            858.585]);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ddahlin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "6s!rit2!vkR5Wr91",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "tr-development=eyJfcGVybWFuZW50Ijp0cnVlLCJ1c2VyLmlkIjoiLVlENkFMc2RUOWFQQmN3Vnh5OW1KUSIsInVzZXIuaXNfYWRtaW4iOmZhbHNlfQ.EQzsWg.vkToDWT3FoiQtA0xmUU6iqhMaLQ; Domain=.vistarmedia.com; Expires=Sat, 25-Jan-2020 05:00:10 GMT; Secure; HttpOnly; Path=/",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"filters\": {\n      \"network\": [\n         \"fS9Lo0ruRROqLLD5onLBTQ\"\n      ]\n   },\n   \"groups\": [\n      \"advertiser\",\n      \"insertion_order\",\n      \"campaign\",\n      \"network\",\n      \"venue_type\",\n      \"creative\",\n      \"priority\",\n      \"month\"\n   ],\n   \"report_type\": \"direct\",\n   \"timezone\": \"America/New_York\",\n   \"metrics\": [\n      \"partner_profit\",\n      \"partner_data_provider_revenue\",\n      \"partner_revenue\",\n      \"spots\",\n      \"partner_eCPM\",\n      \"partner_data_provider_revenue_eCPM\",\n      \"impressions\"\n   ],\n   \"local_start\": \"2019-01-01T00:00:00\",\n   \"local_end\": \"2019-12-31T23:59:59\",\n   \"range_type\": \"last_year\"\n}\n"
+				},
+				"url": {
+					"raw": "https://a-dev-trafficking.vistarmedia.com/report",
+					"protocol": "https",
+					"host": [
+						"a-dev-trafficking",
+						"vistarmedia",
+						"com"
+					],
+					"path": [
+						"report"
+					]
+				},
+				"description": "ede"
+			},
+			"response": []
+		},
+		{
+			"name": "ONE_DAY_REPORT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3588b91d-e172-4a27-a265-e5b25b823a91",
+						"exec": [
+							"pm.test(\"Status code is 200\", function() {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function() {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"",
+							"});",
+							"",
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test(\"Check impressions\", function () {",
+							"pm.expect(jsonData.rows.impressions).to.eql([233472.203052422]);",
+							"});",
+							"pm.test(\"Check spots\", function () {",
+							"pm.expect(jsonData.rows.spots).to.eql([158710]);",
+							"});",
+							"pm.test(\"Check partner_revenue\", function () {",
+							"pm.expect(jsonData.rows.partner_revenue).to.eql([3267.55601506]);",
+							"});",
+							"pm.test(\"partner_eCPM\", function () {",
+							"pm.expect(jsonData.rows.partner_eCPM).to.eql([13.9954819988842]);",
+							"});",
+							"",
+							"pm.test(\"partner_data_provider_revenue_eCPM\", function () {",
+							"pm.expect(jsonData.rows.partner_data_provider_revenue_eCPM).to.eql([0.0]);",
+							"});",
+							"",
+							"pm.test(\"partner_data_provider_revenue\", function () {",
+							"pm.expect(jsonData.rows.partner_data_provider_revenue).to.eql([0.0]);",
+							"});",
+							"",
+							"pm.test(\"partner_profit\", function () {",
+							"pm.expect(jsonData.rows.partner_profit).to.eql([3265.55601506]);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "ddahlin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "6s!rit2!vkR5Wr91",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "tr-development=eyJfcGVybWFuZW50Ijp0cnVlLCJ1c2VyLmlkIjoiLVlENkFMc2RUOWFQQmN3Vnh5OW1KUSIsInVzZXIuaXNfYWRtaW4iOmZhbHNlfQ.EQzsWg.vkToDWT3FoiQtA0xmUU6iqhMaLQ; Domain=.vistarmedia.com; Expires=Sat, 25-Jan-2020 05:00:10 GMT; Secure; HttpOnly; Path=/",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"range_type\": \"last_year\",\n   \"local_end\": \"2019-12-31T23:59:59\",\n   \"filters\": {},\n   \"end\": \"2019-12-31T23:59:59+00:00\",\n   \"metrics\": [\n      \"partner_profit\",\n      \"partner_data_provider_revenue\",\n      \"partner_revenue\",\n      \"spots\",\n      \"partner_eCPM\",\n      \"partner_data_provider_revenue_eCPM\",\n      \"impressions\"\n   ],\n   \"start\": \"2019-01-01T00:00:00+00:00\",\n   \"groups\": [],\n   \"timezone\": \"America/New_York\",\n   \"report_type\": \"direct\",\n   \"local_start\": \"2019-01-01T00:00:00\"\n}\n"
+				},
+				"url": {
+					"raw": "https://a-dev-trafficking.vistarmedia.com/report",
+					"protocol": "https",
+					"host": [
+						"a-dev-trafficking",
+						"vistarmedia",
+						"com"
+					],
+					"path": [
+						"report"
+					]
+				},
+				"description": "ede"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
