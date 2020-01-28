@@ -140,7 +140,8 @@ let executeNewman = (environmentFile, iterationCount) => {
             reporters: ['htmlextra'],
             reporter: {
                 htmlextra: {
-                    export: './reports/htmlResults.html'
+                    export: './reports/htmlResults.html',
+                    template: './reports/templates/dashboard-template.hbs'
                 }
             }
         }, (err, summary) => {
