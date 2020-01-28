@@ -172,7 +172,7 @@
 					},
 					{
 						"key": "Cookie",
-						"value": "tr-development=eyJfcGVybWFuZW50Ijp0cnVlLCJ1c2VyLmlkIjoiLVlENkFMc2RUOWFQQmN3Vnh5OW1KUSIsInVzZXIuaXNfYWRtaW4iOmZhbHNlfQ.ERCNtA.-rNc8qedG83LMTzoKTAjAFk8bBA; Domain=.vistarmedia.com; Expires=Mon, 27-Jan-2020 23:05:24 GMT; Secure; HttpOnly; Path=/",
+						"value": "r-development=eyJfcGVybWFuZW50Ijp0cnVlLCJ1c2VyLmlkIjoiLVlENkFMc2RUOWFQQmN3Vnh5OW1KUSIsInVzZXIuaXNfYWRtaW4iOmZhbHNlfQ.EREo0A.4-0l3PzUdH1hkMZaClsowJSf7YA; Domain=.vistarmedia.com; Expires=Tue, 28-Jan-2020 10:07:12 GMT; Secure; HttpOnly; Path=/",
 						"type": "text"
 					}
 				],
